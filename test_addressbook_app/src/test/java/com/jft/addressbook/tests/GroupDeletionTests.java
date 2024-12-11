@@ -1,4 +1,4 @@
-package com.addressbook.tests;
+package com.jft.addressbook.tests;
 
 import org.testng.annotations.*;
 
@@ -6,10 +6,9 @@ public class GroupDeletionTests extends BaseTest {
 
   @Test
   public void testGroupDeletion() {
-    gotoGroupsPage();
-    selectGroup();
-    deleteGroup();
-    returnToGroupsPage();
+    app.gotoGroupsPage();
+    app.selectGroup();
+    app.deleteGroup();
+    app.returnToGroupsPage();
   }
-
 }

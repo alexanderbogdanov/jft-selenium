@@ -2,7 +2,7 @@
 <suite name="Selenium Suite">
     <test name="Address Book Tests">
         <classes>
-            <class name="com.addressbook.tests.GroupCreationTests"/>
+            <class name="com.jft.addressbook.tests.GroupCreationTests"/>
         </classes>
     </test>
 </suite>
