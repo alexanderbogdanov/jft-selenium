@@ -4,21 +4,6 @@ import org.testng.annotations.*;
 import org.openqa.selenium.*;
 
 public class ContactCreationTests extends BaseTest {
-  @BeforeMethod
-  public void loginToApp() {
-    wd.get("http://localhost/addressbook/index.php");
-    login("admin", "secret");
-  }
-
-  private void login(String username, String password) {
-    wd.findElement(By.name("user")).click();
-    wd.findElement(By.name("user")).clear();
-    wd.findElement(By.name("user")).sendKeys(username);
-    wd.findElement(By.name("pass")).click();
-    wd.findElement(By.name("pass")).clear();
-    wd.findElement(By.name("pass")).sendKeys(password);
-    wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
-  }
 
   @Test
   public void testContactCreation() {
@@ -33,7 +18,7 @@ public class ContactCreationTests extends BaseTest {
     }
 
     private void submitContactCreation() {
-      wd.findElement(By.name("submit")).click();
+      submitGroupCreation();
     }
 
     private void fillContactForm(ContactData contactData) {
